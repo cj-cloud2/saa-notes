@@ -1,7 +1,3 @@
-Here is the training sheet for **Title 2: Account Security**, organized according to your specific formatting requirements.
-
----
-
 # TITLE 2: Account Security (IAM, Organizations, Policies, Roles)
 
 ---
