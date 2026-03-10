@@ -30,31 +30,7 @@ D. Server-Side Encryption with AWS KMS-Managed Keys (SSE-KMS)
 
 ## ---
 
-**Question 15**
 
-A company's legacy application is currently relying on a single-instance Amazon RDS MySQL database without encryption. Due to new compliance requirements, all existing and new data in this database must be encrypted.
-
-How should this be accomplished?
-
-A. Create an Amazon S3 bucket with server-side encryption turned on. Move all the data to Amazon S3. Delete the RDS instance.
-
-B. Configure RDS Multi-AZ mode with encryption at rest turned on. Perform a failover to the standby instance to delete the original instance.
-
-C. Take a snapshot of the RDS instance. Create an encrypted copy of the snapshot. Restore the RDS instance from the encrypted snapshot.
-
-D. Create an RDS read replica with encryption at rest turned on. Promote the read replica to primary and switch the application over to the new primary. Delete the old RDS instance.
-
-**Correct Answer with Provided Explanation:**
-
-**C. Correct.** You can configure encryption for an RDS DB instance only when you create the DB instance. Alternatively, you can create a snapshot of the RDS instance. Next, you create an encrypted copy of the snapshot. Finally, you can create an RDS instance from the encrypted snapshot.
-
-**Explanation for why other options are wrong:**
-
-* **Option A:** Moving data to S3 completely changes the application architecture from relational to object storage, which is not a feasible solution for a legacy relational application.  
-* **Option B:** Enabling Multi-AZ is a high-availability feature; it does not allow you to toggle encryption on an existing unencrypted database instance.  
-* **Option D:** In RDS MySQL, you cannot create an encrypted read replica from an unencrypted primary instance. The encryption status of the replica must match the primary.
-
-## ---
 
 **Question 20**
 
